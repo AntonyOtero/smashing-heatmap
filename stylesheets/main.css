@@ -1,0 +1,17 @@
+/* DEBUG */
+
+.trace {
+  border: 1px solid #a30000;
+}
+
+.hide {
+  display: none;
+}
+
+/* DEFAULTS */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
