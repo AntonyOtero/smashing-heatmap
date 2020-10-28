@@ -14,16 +14,19 @@ html {
 }
 
 body {
-  border: none;
+  max-width: 1440px;
+  margin: 0 auto;
+  border: 1px solid #212121;
 }
 
 header {
-  display: grid;
-  grid-template-columns: min-content minmax(140px, 2fr) minmax(100px, 350px);
-  column-gap: 10px;
   height: 109px;
   width: 100%;
+  display: grid;
   padding: 16px 44px;
+  grid-template-columns: min-content minmax(140px, 2fr) minmax(100px, 350px);
+  column-gap: 10px;
+  border-bottom: 1px solid #212121;
 }
 
 main {
@@ -32,16 +35,16 @@ main {
 
 footer {
   display: flex;
+  padding: 35px 53px 53px 53px;
   flex-direction: column;
   align-items: center;
-  padding: 35px 53px 53px 53px;
 }
 
 /* CLASSES */
 
 .logo {
+  width: 196px;
   height: 49px;
-  width: 232px;
   align-self: center;
 }
 
@@ -52,13 +55,13 @@ footer {
 }
 
 .main-nav div {
-  height: 38px;
-  width: 81px;
+  width: 51px;
+  height: 25px;
 }
 
 .main-nav div:last-child {
-  height: 54px;
-  width: 91px;
+  width: 114px;
+  height: 47px;
 }
 
 .search {
@@ -68,31 +71,51 @@ footer {
 }
 
 .featured-articles {
-  height: 828px;
-  display: flex;
+  display: grid;
   position: relative;
-  justify-content: center;
+  grid-template-columns: repeat(2, 720px);
+  grid-template-rows: 670px 581px;
 }
 
 .featured-articles-heading {
+  width: 466px;
   height: 128px;
-  width: 467px;
   position: absolute;
   top: 50px;
+  left: calc(50% - (466px / 2));
   z-index: 1;
 }
 
 .featured-article {
-  height: 838px;
-  width: 635px;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #212121;
 }
 
-.featured-article:nth-child(even) {
-  background-color: inherit;
+.featured-article:nth-child(odd) {
+  border-right: 1px solid #212121;
+}
+
+.featured-article:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.featured-article:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.featured-article:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.featured-article:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .featured-article-info {
@@ -106,13 +129,13 @@ footer {
 }
 
 .author-image {
-  height: 87px;
   width: 97px;
+  height: 87px;
 }
 
 .author-credit {
-  height: 23px;
   width: calc(100% - 117px);
+  height: 23px;
 }
 
 .featured-article-title {
@@ -127,32 +150,34 @@ footer {
 }
 
 .tag-item {
-  height: 31px;
   width: 75px;
+  height: 31px;
   margin-right: 20px;
 }
 
 .featured-article .article-link {
   position: absolute;
-  left: 96px;
   bottom: 60px;
+  left: 96px;
   align-self: flex-end;
 }
 
 .article-link {
-  height: 20px;
   width: 30px;
+  height: 20px;
   margin-top: 60px;
 }
 
 .promotion-panel-first{
   padding: 60px 344px;
   position: relative;
+  padding: 31px 159px;
+  border-bottom: 1px solid #212121;
 }
 
 .promotion-panel-first_context {
-  height: 111px;
   width: 650px;
+  height: 111px;
   margin: 32px 0;
 }
 
@@ -163,32 +188,33 @@ footer {
 }
 
 .upcoming-item {
-  height: 37px;
   width: 330px;
+  height: 37px;
   margin: 10px 0;
 }
 
 .promotion-panel-first_button {
-  height: 111px;
   width: 430px;
+  height: 111px;
   margin: 32px 0;
 }
 
 .promotion-panel-first_image {
-  height: 364px;
-  width: 307px;
+  width: 300px;
+  height: 329px;
   position: absolute;
   top: -60px;
-  right: 550px;
+  right: 200px;
 }
 
 .latest-posts {
   position: relative;
+  padding: 0 40px;
 }
 
 .latest-posts-heading {
-  height: 271px;
   width: 25px;
+  height: 271px;
   position: absolute;
   left: 25px;
   top: -45px;
@@ -196,14 +222,15 @@ footer {
 
 .latest-posts .container {
   display: grid;
-  grid-template-columns: repeat(4, 443px);
-  grid-template-rows: 625px 694px 657px;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: 586px 746px 586px 626px;
+  column-gap: 30px;
   row-gap: 30px;
   margin: 0 50px;
 }
 
 .latest-posts-article {
-  padding: 30px 40px 0 40px;
+  padding-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -223,12 +250,12 @@ footer {
 }
 
 .latest-posts-article:nth-child(4) {
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .latest-posts-aside:nth-child(5) {
-  grid-column: 1 / 3;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
@@ -238,23 +265,23 @@ footer {
 }
 
 .latest-posts-article:nth-child(7) {
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-}
-
-.latest-posts-article:nth-child(8) {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
-.latest-posts-article:nth-child(9) {
+.latest-posts-article:nth-child(8) {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
 
-.latest-posts-aside:nth-child(10) {
-  grid-column: 3 / 5;
+.latest-posts-article:nth-child(9) {
+  grid-column: 3 / 4;
   grid-row: 3 / 4;
+}
+
+.latest-posts-aside:nth-child(10) {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
 }
 
 .latest-posts-article_date {
@@ -297,8 +324,8 @@ footer {
 }
 
 .latest-posts-ad_button {
-  height: 35px;
   width: 126px;
+  height: 35px;
   margin: 0 auto;
 }
 
@@ -307,23 +334,24 @@ footer {
   margin: 30px;
   flex-direction: column;
   align-items: center;
+  border:  1px solid #212121;
 }
 
 .latest-posts-aside_image {
-  height: 290px;
   width: 258px;
+  height: 290px;
   margin: 22px 0;
 }
 
 .latest-posts-aside_heading {
   height: 78px;
-  width: 565px;
+  width: 325px;
   margin: 15px 0;
 }
 
 .latest-posts-aside_context {
+  width: 331px;
   height: 111px;
-  width: 664px;
   margin: 32px 0;
 }
 
@@ -341,8 +369,8 @@ footer {
 }
 
 .latest-posts-link {
-  height: 53px;
   width: 233px;
+  height: 53px;
   padding-top: 22px;
   margin: 111px auto;
 }
@@ -352,6 +380,8 @@ footer {
   padding: 77px 0;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
 }
 
 .promo-panel-two_release {
@@ -406,11 +436,11 @@ footer {
 }
 
 .community-links-container {
-  width: 1681px;
+  width: 1354px;
   display: grid;
   grid-template-columns: repeat(2, 645);
   grid-template-rows: repeat(4, 386);
-  padding: 0 16px;
+  padding: 16px;
   margin: 0 auto;
 }
 
@@ -505,6 +535,8 @@ footer {
 .promo-panel-three {
   padding: 51px 71px;
   position: relative;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
 }
 
 .promo-panel-three_heading {
@@ -540,7 +572,7 @@ footer {
   width: 25px;
   position: absolute;
   left: 25px;
-  top: -45px;
+  top: -75px;
 }
 
 .our-guides-container {
@@ -558,6 +590,7 @@ footer {
   height: 100%;
   margin: 31px 0;
   padding: 39px;
+  border: 1px solid #212121;
 }
 
 .guide-card:nth-child(1) {
@@ -704,7 +737,7 @@ footer {
 /* DEBUG */
 
 .trace {
-  border: 1px solid #a30000;
+  border: 1px solid #212121;
 }
 
 .hide {
