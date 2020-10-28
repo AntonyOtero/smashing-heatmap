@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Smashing Magazine Heatmap
 
-> One paragraph statement about the project.
+> The goal for this exercise was to start training ourselves to think in terms of visual hierarchy, typography and design principles. We had to create a grayscale heat map of the [Smashing Magazine website](https://www.smashingmagazine.com/#top) that indicated which elements have the greatest weight in the visual hierarchy. This project also served us an opportunity to get better at positioning div elements without worrying about the content inside.
 
 ![screenshot](./images/app_screenshot.png)
 
