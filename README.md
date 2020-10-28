@@ -6,8 +6,6 @@
 
 ![screenshot](./images/app_screenshot_visible.png)
 
-Additional description about the project and its features.
-
 ## Built With
 
 - HTML5
